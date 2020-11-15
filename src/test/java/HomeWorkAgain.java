@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HomeWorkAgain {
 
-    public double principal = 1000;
+    public double principal = 10000;
 
     @Test
     public void loanSum() {
@@ -37,7 +37,26 @@ public class HomeWorkAgain {
 
     }
 
+    @Test
+    public void loanByMonths() {
 
+        // 10% for first 1 years, 8% for next 10 years, 6% for last 10 years.
+        double interest1 = 10;
+        double interest2 = 8;
+        double interest3 = 6;
+        double i = (interest1 / 100 * principal) + (interest2 / 100 * principal)
+                + (interest3 / 100 * principal);
+        double allsum = sumYear(principal, interest1, interest2, interest3);
+
+        System.out.println("The amount to pay for all period is: " + allsum + ", Principal is equal: " + principal +
+                ", Interest is equal: " + i);
+    }
+
+    private double sumYear(double principal, double interest1, double interest2, double interest3) {
+        return (interest1 / 100 * principal) + (interest2 / 100 * principal)
+                + (interest3 / 100 * principal) + principal;
+
+    }
 }
 
 
