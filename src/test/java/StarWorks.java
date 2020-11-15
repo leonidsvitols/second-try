@@ -6,6 +6,7 @@ public class StarWorks {
 
         System.out.println("Count using split logic " + countWordsUsingSplit("  My works becomes more difficult "));
     }
+// copy paste is a good thing, still I want to understand later what's wrong with array declaration here
 
     private static int countWords(String str){
         int c = 0;
